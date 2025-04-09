@@ -1,0 +1,107 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>San Francisco Real Estate Analysis Dashboard</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+      h1 { color: #3F51B5; }
+      h2 { color: #5C6BC0; margin-top: 30px; }
+      .dashboard { display: flex; flex-wrap: wrap; }
+      .card { background: #f9f9f9; border-radius: 8px; margin: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+      .full-width { width: calc(100% - 50px); }
+      .half-width { width: calc(50% - 50px); }
+      img { max-width: 100%; border-radius: 5px; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { text-align: left; padding: 12px; }
+      th { background-color: #5C6BC0; color: white; }
+      tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+  </head>
+  <body>
+    <h1>San Francisco Condo Market Analysis</h1>
+    <h2>Patrick Swain</h2> 
+    
+    <div class="dashboard">
+      <div class="card full-width">
+        <h2>Summary</h2>
+<p>
+This analysis illustrates key factors influencing property prices across different districts. One prominent insight is the significant price premium associated with District 7, where homes command nearly $387,000 more than average, driven by location-based desirability. This effect is mirrored in the <strong>Square Footage Value by District</strong> plot, which highlights the dramatic disparity in price per square foot—exceeding $1,000/sqft in District 7 but falling below $200/sqft in District 10, reflecting socioeconomic and infrastructural variations.
+</p>
+<p>
+Additionally, the <strong>Square Footage Effect Across Price Tiers</strong> visualization emphasizes how the impact of square footage intensifies in luxury markets, where homes in the top 90th percentile show a 2.5× greater return on added square footage than mid-tier properties, indicating that size matters more at higher price points. Interestingly, the <strong>Bedroom Effect Across Price Tiers</strong> chart reveals a counterintuitive trend: increasing the number of bedrooms may actually reduce property value when controlling for square footage, suggesting that buyers prioritize fewer, more spacious rooms.
+</p>
+<p>
+Furthermore, the <strong>Days on Market (DOM)</strong> and <strong>Condo Sales by Month</strong> plots offer insights into market dynamics and liquidity, illustrating seasonal variations and temporal trends. Despite these fluctuations, the analysis finds no consistent relationship between condo sales volume and changes in the Federal Reserve interest rates, reflecting the complex interplay of local housing demand and broader macroeconomic forces.
+</p>
+<p>
+Collectively, these visualizations provide a nuanced, data-driven understanding of San Francisco’s real estate market, underscoring the multidimensional factors that shape property valuation and buyer behavior.
+</p>
+
+        <h2>Key Insights</h2>
+        <ul>
+          <li>Location is the dominant factor in property pricing, with District 7 commanding a premium of nearly $387,000</li>
+          <li>Square footage value varies dramatically by location - worth over $1,000/sqft in District 7 vs. under $200/sqft in District 10</li>
+          <li>Impact of square footage increases with property price tier - 2.5× greater in luxury properties (90th percentile)</li>
+          <li>Additional bedrooms decrease property value when controlling for square footage, suggesting buyers prefer fewer, larger rooms</li>
+          <li>Property age effects vary by price segment, with mixed evidence about whether newer properties command higher prices</li>
+          <li>There is no significant relationship between the number of condo sales per month and fluctuations in the Federal Reserve's interest rates</li>
+        </ul>
+        <h2>Tools</h2>
+        <ul>
+          <li>R libraries dplyr, ggplot2, tidyr, scales, lubridate, quantmod, randomForest, ggpubr, lme4, mgcv, quantreg, glmnet, sjPlot, gratia, and vip </li>
+      </div>
+      
+      <div class="card half-width">
+        <h2>Neighborhood Price Effects</h2>
+        <img src="neighborhood_impact.png" alt="Neighborhood Price Effects">
+      </div>
+      
+      <div class="card half-width">
+        <h2>Feature Importance</h2>
+        <img src="feature_impact.png" alt="Feature Importance">
+      </div>
+      
+      <div class="card half-width">
+        <h2>Square Footage Value by District</h2>
+        <img src="sqft_by_district.png" alt="Square Footage by District">
+      </div>
+      
+      <div class="card half-width">
+        <h2>Square Footage Effect Across Price Tiers</h2>
+        <img src="quantile_sq_footage.png" alt="Square Footage Quantile Effects">
+      </div>
+      
+      <div class="card half-width">
+        <h2>Bedroom Effect Across Price Tiers</h2>
+        <img src="quantile_bedrooms.png" alt="Bedroom Quantile Effects">
+      </div>
+      
+      <div class="card half-width">
+        <h2>Condo Sales by Month</h2>
+        <img src="sales_trend_plot.png" alt="Condo Sales by Month">
+      </div>
+      
+      <div class="card half-width">
+        <h2>Days on Market (DOM)</h2>
+        <img src="DOM_plot.png" alt="Days on Market (DOM)">
+      </div>
+      
+      <div class="card half-width">
+        <h2>Condo Prices by Month</h2>
+        <img src="price_trend_plot.png" alt="Condo Prices by Month">
+      </div>
+      
+      <div class="card half-width">
+        <h2>Condo Square Footage</h2>
+        <img src="sqft_distribution.png" alt="Condo Prices by Month">
+      </div>
+      
+      <div class="card half-width">
+        <h2>Sales vs. Fed Interest Rates</h2>
+        <img src="sales_trend_plot_interest.png" alt="Sales vs. Fed Interest Rates">
+      </div>
+      
+  </body>
+  </html>
+  
